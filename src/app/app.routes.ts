@@ -9,5 +9,6 @@ export const ROUTES : Routes = [
     { path: 'ingresos', component: IngresosComponent },
     { path: 'gastos', component: GastosComponent },
     { path: 'cuentas', component: CuentasComponent },
-    { path: 'relagion', component: RelacionPagosComponent }
+    { path: 'relacion-pagos', component: RelacionPagosComponent },
+    { path: '', pathMatch: 'full', redirectTo: 'cuentas'}
 ];

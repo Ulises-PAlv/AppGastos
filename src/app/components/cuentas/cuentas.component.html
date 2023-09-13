@@ -1,1 +1,24 @@
-<p>cuentas works!</p>
+<section>
+    <div class="container">
+        <div class="header text-center">
+            <h2>Cuentas</h2>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-8">
+
+            </div>
+            <div class="col-4">
+                <form class="py-3 px-2 text-center">
+                    <mat-form-field>
+                        <mat-label>Fecha de Apertura</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

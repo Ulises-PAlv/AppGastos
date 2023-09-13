@@ -1,1 +1,102 @@
-<p>gastos works!</p>
+<section>
+    <div class="container">
+        <div class="header text-center">
+            <h2>Gastos</h2>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-8 py-3">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Entidad</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Monto</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Pago #3 Celular</td>
+                            <td>Papá</td>
+                            <td>1</td>
+                            <td>$840</td>
+                            <td>15/09/2023</td>
+                            <td>$840</td>
+                            <td class="px-4"><i class="fas fa-spinner"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Boletos: Barbie</td>
+                            <td>Generales</td>
+                            <td>2</td>
+                            <td>$160</td>
+                            <td>12/09/2023</td>
+                            <td>$320</td>
+                            <td class="px-4"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Luz</td>
+                            <td>CFE</td>
+                            <td>1</td>
+                            <td>$560</td>
+                            <td>30/09/2023</td>
+                            <td>$560</td>
+                            <td class="px-4"><i class="fas fa-times"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-4">
+                <form class="py-3 px-2 text-center">
+                    <div class="form-group px-5">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Mensualidad Celular">
+                    </div>
+                    <div class="form-group my-3 px-5">
+                        <div class="row">
+                            <div class="col-9">
+                                <select id="entidad" class="form-select">
+                                    <option>Entidad</option>
+                                    <option value="">Telecable</option>
+                                    <option value="">Diego</option>
+                                </select>
+                            </div>
+                            <div class="col-2 d-grid gap-2">
+                                <button class="btn btn-dark" type="button"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3 px-5">
+                        <div class="col">
+                            <label for="cantidad">Cantidad</label>
+                            <input type="number" id="cantidad" class="form-control" placeholder="1">
+                        </div>
+                        <div class="col">
+                            <label for="monto">Monto</label>
+                            <input type="text" id="monto" class="form-control" placeholder="570.00">
+                        </div>
+                    </div>
+                    <div class="row mb-3 px-5">
+                        <mat-form-field>
+                            <mat-label>Fecha de Pago</mat-label>
+                            <input matInput [matDatepicker]="picker">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="d-grid gap-2 px-5">
+                        <button class="btn btn-dark" type="button">Agregar gasto</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
